@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<plugin xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="../../../engine/Shopware/Components/Plugin/schema/plugin.xsd">
+    <label lang="de">Site Search 360 Produktsuche</label>
+    <label lang="en">Site Search 360 productsearch</label>
+    <version>1.10.8</version>
+    <copyright>woso</copyright>
+    <license>semknox</license>
+    <link>http://www.semknox.com</link>
+    <author>semknox</author>
+    <description lang="de">
+        <![CDATA[Stellt einen Such-Controller zur Nutzung der semantischen Suche von Site Search 360 bereit<br />Zur Nutzung benötigen Sie eine API-Key und eine Projekt-ID, zu erfragen unter <a href="mailto:shopware@semknox.com">shopware@semknox.com</a>.]]>
+    </description>    
+    <compatibility minVersion="5.2.15" />
+</plugin>

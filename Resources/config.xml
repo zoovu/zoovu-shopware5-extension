@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../engine/Shopware/Components/Plugin/schema/config.xsd">
+    <label>Konfiguration semknoxSearch</label>
+    <description>Semknox-Search-Config</description>
+    <elements>
+        <element required="false" type="select" scope="shop">
+            <name>semknoxActivate</name>
+            <label lang="de">Site Search 360 -Suche für Subshop aktivieren</label>
+            <label lang="en">use Site Search 360 in subshop</label>
+            <value>_woso_0</value>
+            <store>
+                    <option>
+                         <value>_woso_1</value>
+                         <label lang="de">Site Search 360-Suche für diesen Subshop aktivieren</label>
+                         <label lang="en">use Site Search 360-search in this subshop</label>
+                    </option>
+                    <option>
+                         <value>_woso_0</value>
+                         <label lang="de">Site Search 360- deaktiviert</label>
+                         <label lang="en">deactivate Site Search 360</label>
+                    </option>                    
+            </store>
+        </element>      
+        <element required="false" type="text" scope="shop">
+            <name>semknoxCustomerId</name>
+            <label lang="de">Site Search 360-Projekt-ID</label>
+            <label lang="en">Site Search 360-Project-ID</label>
+            <value> </value>
+            <description></description>
+        </element>
+        <element required="false" type="text" scope="shop">
+            <name>semknoxApiKey</name>
+            <label lang="de">Site Search 360-API-Key</label>
+            <label lang="en">Site Search 360-Key</label>
+            <value> </value>
+            <description></description>
+        </element>
+
+        <element required="true" type="boolean" scope="shop">
+            <name>semknoxRewriteCat</name>
+            <label lang="de">Category Direct-Access</label>
+            <label lang="en">category-direct-access</label>
+            <value>false</value>
+        </element>
+        
+        <element required="true" type="boolean" scope="shop">
+            <name>semknoxUseGrouped</name>
+            <label lang="de">Produktanzeige gruppieren</label>
+            <label lang="en">use grouped productresults</label>
+            <value>false</value>
+        </element>
+        
+        <element required="true" type="select" scope="shop">
+            <name>semknoxGroupID</name>
+            <label lang="de">Gruppierungs-ID</label>
+            <label lang="en">group-ID</label>
+            <value>_woso_0</value>
+            <description>Wie sollen die Artikel gruppiert werden. Standardmäßig wird für Varianten die ID des Hauptartikels eingesetzt. Sofern Sie keine Varianten einsetzen wollen, können Sie durch Auswahl der Kategorie-ID trotzdem Artikelgruppen anhand der Kategoriezugehörigkeit aufbauen. Wählen Sie keine, wird keine Gruppierungsinformation an Semknox übertragen.</description>
+            <store>
+                    <option>
+                    	 <value>_woso_1</value>
+                    	 <label lang="de">Varianten-ID</label>
+                    	 <label lang="en">variant-ID</label>
+                    </option>
+                    <option>
+                    	 <value>_woso_2</value>
+                    	 <label lang="de">Kategorie-ID</label>
+                    	 <label lang="en">category-ID</label>
+                    </option>
+                    <option>
+                    	 <value>_woso_0</value>
+                    	 <label lang="de">keine</label>
+                    	 <label lang="en">none</label>
+                    </option>                    
+            </store>
+        </element>   
+
+        
+        <element required="true" type="boolean" scope="shop">
+            <name>semknoxUseHeadOnly</name>
+            <label lang="de">Zeige nur direkte Treffer</label>
+            <label lang="en">only show direct search hits</label>
+            <value>true</value>
+        </element>        
+
+        <element required="false" type="boolean" scope="shop">
+            <name>semknoxUseVariantConfigAsFlag</name>
+            <label lang="de">Varianten-Merkmale als Flag ausgeben</label>
+            <label lang="en">show variant-attributes as flag</label>
+            <value>false</value>
+            <description>Wenn Sie hier ja auswählen, werden die im Varianten-Konfigurator ausgewählten Merkmale als Flag bei der Suchausgabe ausgegeben.</description>
+        </element>        
+
+          
+        <element required="false" type="text" scope="shop">
+            <name>semknoxRankingAttribute</name>
+            <label lang="de">Ranking-Feld in article_attributes</label>
+            <label lang="en">ranking-field in article_attributes</label>
+            <value></value>
+            <description></description>
+        </element>
+           
+        <element required="false" type="text" scope="shop">
+            <name>semknoxRedirCode</name>
+            <label lang="de">HTTP-Responsecode für Weiterleitungen</label>
+            <label lang="en">HTTP-responsecode for redirections</label>
+            <value>302</value>
+            <description>default 302</description>
+        </element>
+
+        <element required="false" type="boolean" scope="shop">
+            <name>semknoxUpdateTemplates</name>
+            <label lang="de">Template der Suchseite überschreiben</label>
+            <label lang="en">overwrite template of search</label>
+            <value>false</value>
+            <description>Wenn Sie hier nein wählen, werden keine zusätzlichen Informationen von Semknox ausgegeben. Sie müssen diese dann selbst im Template hinterlegen.</description>
+        </element>        
+
+        <element required="false" type="boolean" scope="shop">
+            <name>semknoxUpdateSingle</name>
+            <label lang="de">Update von einzelnen Artikeln aktivieren</label>
+            <label lang="en">use single article-update</label>
+            <value>false</value>
+        </element>        
+
+        <element required="false" type="number" scope="shop">
+            <name>semknoxUpdateMaxItems</name>
+            <label lang="de">Max. Anzahl Artikel für den Update-Aufbau</label>
+            <label lang="en">max. number of items for update</label>
+            <value>500</value>
+            <description>Diese Zahl gibt an, wie viele Artikel in einem Update-Durchgang gleichzeitig aufgebaut werden. Wenn Sie Schwierigkeiten beim Updateprozess haben, wählen Sie hier eine kleinere Zahl</description>
+        </element>        
+
+        <element required="true" type="boolean" scope="shop">
+            <name>semknoxUseFallback</name>
+            <label lang="de">Fallback</label>
+            <label lang="en">use grouped productresults</label>
+            <value>true</value>
+            <description>Wählen Sie hier ja, wenn bei erfolgloser Suche bei semknox die interne Suche als Fallback aktiviert werden soll. Nutzen Sie diese Funktion auch, wenn Sie ihre aktuelle Suche im Live-System umstellen, um die Zeit bis die Updatedaten zu Semknox übertragen und dort berechnet wurden, zu überbrücken.</description>
+        </element>
+        
+        <element required="true" type="boolean" scope="shop">
+            <name>semknoxAddOrdernumber</name>
+            <label lang="de">Füge Artikelnummer zu Link hinzu (Variantenlinks)</label>
+            <label lang="en">add ordernumber to URL (variant-URLs)</label>
+            <value>true</value>
+            <description>Wählen Sie hier ja, wenn Sie in den Suchergebnissen direkt zu Varianten von Artikeln verlinken wollen.</description>
+        </element>
+        
+        <element required="false" type="boolean" scope="shop">
+            <name>semknoxAppendNoStock</name>
+            <label lang="de">Artikel mit Lagerbestand &lt;=0 nur anhängen</label>
+            <label lang="en">only append items with stock &lt;= 0</label>
+            <value>false</value>
+            <description>Setzen Sie diesen Wert auf ""ja", wenn Artikel ohne Lagerbestand nur auf den hinteren Plätzen der Suche erscheinen sollen</description>
+        </element>
+
+        <element required="false" type="boolean" scope="shop">
+            <name>semknoxDeleteNoStock</name>
+            <label lang="de">Artikel mit Lagerbestand &lt;=0 aus Suche löschen</label>
+            <label lang="en">delete items with stock &lt;= 0</label>
+            <value>false</value>
+            <description>Setzen Sie diesen Wert auf ""ja", wenn Artikel ohne Lagerbestand nicht in der Suche erscheinen sollen</description>
+        </element>
+
+        <element required="false" type="boolean" scope="shop">
+            <name>semknoxPreferPrimaryVariant</name>
+            <label lang="de">primäre Variante in Listing bevorzugen</label>
+            <label lang="en">only prefer primary variant instead of best ranking</label>
+            <value>false</value>
+            <description>Nutzen Sie diesen Wert, um die primäre Variante in Listings anzuzeigen, nicht die Variante mit dem besten Ranking</description>
+        </element>
+
+        <element required="false" type="text" scope="shop">
+            <name>semknoxRegEx</name>
+            <label lang="de">Regurlärer Ausdruck für Eingabetransformation</label>
+            <label lang="en">regexpr. for input-transformation</label>
+            <value></value>
+            <description>Geben Sie hier einen regulären Ausdruck im PCRE-Format an, der mit nachfolgender Ersetzung transformiert werden soll. Beide Werte sind notwendig!</description>
+        </element>
+           
+        <element required="false" type="text" scope="shop">
+            <name>semknoxRegExRepl</name>
+            <label lang="de">Regulärer Ausdruck Ersetzung</label>
+            <label lang="en">regexpr. replacement-string</label>
+            <value></value>
+            <description></description>
+        </element>
+           
+        <element required="false" type="text" scope="shop">
+            <name>semknoxDebugfile</name>
+            <label lang="de">debug-dateiname</label>
+            <label lang="en">debug-file</label>
+            <value></value>
+            <description>Output debug-data to this file. Write-permission must be guaranteed!</description>
+        </element>
+
+        <element required="false" type="boolean" scope="shop">
+            <name>semknoxRedirectOneProduct</name>
+            <label lang="de">Auf Produktseite weiterleiten, bei nur einem Ergebnis in der Suche</label>
+            <label lang="en">redirect to product-page if only one result</label>
+            <value>false</value>
+            <description>Bei nur einem Ergebnis in der Suche, direkt zum Produkt weiterleiten.</description>
+        </element>
+           
+        
+        <element required="false" type="text" scope="shop">
+            <name>semknoxSuggestCatSort</name>
+            <label lang="de">Vorschlagende Suche - Kategorie-Reihenfolge</label>
+            <label lang="en">suggests category-sortorder</label>
+            <value>products</value>
+            <description>Kategorie-Reihenfolge in der vorschlagenden Suche, wenn die Kategorie hier nicht aufgeführt ist, wird sie im Frontend nicht angezeigt (default: [products|suggest]|categories|brands)</description>
+        </element>
+           
+        <element required="false" type="text" scope="shop">
+            <name>semknoxSuggestCatRel</name>
+            <label lang="de">Vorschlagende Suche - Kategorie-Titel</label>
+            <label lang="en">suggests category-title</label>
+            <value>categories=Kategorien|products=Produkte|suggests=Suchvorschläge|brands=Marken</value>
+            <description>Verknüpfung von Kategorie zu Titel der vorschlagenden Suche, z.b. cat=Kategorien mit | getrennt</description>
+        </element>
+           
+        <element required="false" type="text" scope="shop">
+            <name>semknoxSuggestImgBaseUrl</name>
+            <label lang="de">Vorschlagende Suche - Basisurl für Bilder</label>
+            <label lang="en">suggests base-url for images</label>
+            <value>https://login.semknox.com/images/ivf/</value>
+            <description>Basis-URL für Bilder in der Liste, die keine Domain-zusätze haben</description>
+        </element>
+           
+        <element required="false" type="boolean" scope="shop">
+            <name>semknoxSuggestUseShopwareProducts</name>
+            <label lang="de">Vorschlagende Suche - Produktanzeige von Shopware verwenden</label>
+            <label lang="en">use product-template of shopware</label>
+            <value>true</value>
+            <description>Nutze die eingebaute Produktanzeige von Shopware. Die eingebaute Shopware-Funktion kommt immer an Platz 1 in der Ausgabe</description>
+        </element>
+           
+        <element required="false" type="number" scope="shop">
+            <name>semknoxUpdateMaxCatParents</name>
+            <label lang="de">Max. Anzahl an Kategorien in Kategorie-Titel</label>
+            <label lang="en">max. number of categories in cat-title </label>
+            <value>1</value>
+            <description>Diese Zahl gibt an, wie viele übergeordnete Kategorien mit in den Titel einer Kategorie für die Anzeige im Suche-Flyout genutzt werden. Zusammen mit dem nachfolgenden Parameter Kategorie-Titel-Trennzeichen ergibt die Liste einen Titel einer Kategorie.</description>
+        </element>        
+
+        <element required="false" type="text" scope="shop">
+            <name>semknoxUpdateCatTitleGlue</name>
+            <label lang="de">Kategorie-Titel-Trennzeichen</label>
+            <label lang="en">category-title glue</label>
+            <value> » </value>
+            <description>Trennzeichen für den Kategorietitel, wenn Leer wird das Leerzeichen genutzt.</description>
+        </element>
+           
+        <element required="false" type="text" scope="shop">
+            <name>semknoxOrderScoreText</name>
+            <label lang="de">Titel für den Relevanz-Eintrag in Sortierungs-Liste</label>
+            <label lang="en">Title of score-entry in sort-order-list </label>
+            <value>Relevanz</value>
+            <description>Titel für den Relevanz-Eintrag in Sortierungs-Liste</description>
+        </element>
+           
+        <element required="false" type="boolean" scope="shop">
+            <name>semknoxUseOnlySEOCats</name>
+            <label lang="de">Für den Breadcrumb-Upload nur die SEO-Links nutzen</label>
+            <label lang="en">Only use seo-links for breadcrumbs-upload</label>
+            <value>false</value>
+            <description>Nur die SEO-Links für den Breadcrumb-Upload nutzen</description>
+        </element>
+           
+           
+
+    </elements>
+</config>
